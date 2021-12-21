@@ -38,10 +38,12 @@
             this.txtCipher = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtKeyHist = new System.Windows.Forms.RichTextBox();
             this.btnClrPlain = new System.Windows.Forms.Button();
             this.btnClrCipher = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnPlainCopy = new System.Windows.Forms.Button();
+            this.btnEncCopy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtPlain
@@ -146,21 +148,21 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Ciphertext";
             // 
-            // richTextBox1
+            // txtKeyHist
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(1077, 161);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(163, 494);
-            this.richTextBox1.TabIndex = 10;
-            this.richTextBox1.Text = "Notes";
+            this.txtKeyHist.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKeyHist.Location = new System.Drawing.Point(1077, 161);
+            this.txtKeyHist.Name = "txtKeyHist";
+            this.txtKeyHist.Size = new System.Drawing.Size(163, 494);
+            this.txtKeyHist.TabIndex = 10;
+            this.txtKeyHist.Text = "Key History";
             // 
             // btnClrPlain
             // 
             this.btnClrPlain.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClrPlain.Location = new System.Drawing.Point(421, 589);
+            this.btnClrPlain.Location = new System.Drawing.Point(434, 597);
             this.btnClrPlain.Name = "btnClrPlain";
-            this.btnClrPlain.Size = new System.Drawing.Size(92, 55);
+            this.btnClrPlain.Size = new System.Drawing.Size(79, 47);
             this.btnClrPlain.TabIndex = 11;
             this.btnClrPlain.Text = "Clear";
             this.btnClrPlain.UseVisualStyleBackColor = true;
@@ -169,9 +171,9 @@
             // btnClrCipher
             // 
             this.btnClrCipher.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClrCipher.Location = new System.Drawing.Point(948, 589);
+            this.btnClrCipher.Location = new System.Drawing.Point(958, 599);
             this.btnClrCipher.Name = "btnClrCipher";
-            this.btnClrCipher.Size = new System.Drawing.Size(92, 55);
+            this.btnClrCipher.Size = new System.Drawing.Size(79, 45);
             this.btnClrCipher.TabIndex = 12;
             this.btnClrCipher.Text = "Clear";
             this.btnClrCipher.UseVisualStyleBackColor = true;
@@ -188,15 +190,39 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnPlainCopy
+            // 
+            this.btnPlainCopy.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlainCopy.Location = new System.Drawing.Point(349, 597);
+            this.btnPlainCopy.Name = "btnPlainCopy";
+            this.btnPlainCopy.Size = new System.Drawing.Size(79, 47);
+            this.btnPlainCopy.TabIndex = 14;
+            this.btnPlainCopy.Text = "Copy";
+            this.btnPlainCopy.UseVisualStyleBackColor = true;
+            this.btnPlainCopy.Click += new System.EventHandler(this.btnPlainCopy_Click);
+            // 
+            // btnEncCopy
+            // 
+            this.btnEncCopy.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEncCopy.Location = new System.Drawing.Point(873, 599);
+            this.btnEncCopy.Name = "btnEncCopy";
+            this.btnEncCopy.Size = new System.Drawing.Size(79, 45);
+            this.btnEncCopy.TabIndex = 15;
+            this.btnEncCopy.Text = "Copy";
+            this.btnEncCopy.UseVisualStyleBackColor = true;
+            this.btnEncCopy.Click += new System.EventHandler(this.btnEncCopy_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1268, 682);
+            this.Controls.Add(this.btnEncCopy);
+            this.Controls.Add(this.btnPlainCopy);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClrCipher);
             this.Controls.Add(this.btnClrPlain);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtKeyHist);
             this.Controls.Add(this.btnGo);
             this.Controls.Add(this.radDec);
             this.Controls.Add(this.radEnc);
@@ -226,10 +252,12 @@
         private System.Windows.Forms.RichTextBox txtCipher;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtKeyHist;
         private System.Windows.Forms.Button btnClrPlain;
         private System.Windows.Forms.Button btnClrCipher;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPlainCopy;
+        private System.Windows.Forms.Button btnEncCopy;
     }
 }
 

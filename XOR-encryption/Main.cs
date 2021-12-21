@@ -34,6 +34,7 @@ namespace XOR_encryption
 
         private void btnKeyGen_Click(object sender, EventArgs e)
         {
+            txtKeyHist.Text += (txtKey.Text + "\r\n");
             string key = "";
             var rand = new Random();
 
@@ -93,8 +94,11 @@ namespace XOR_encryption
                                 for (int k = 0; k < currBinNum.Length; k++)
                                 {
                                     plainAsciiBin += XOR(currBinNum.Substring(k, 1), key.Substring(k, 1));
-                                    
                                 }
+                                int plainAscii = Convert.ToInt32(plainAsciiBin, 2);
+                                char plainText = (char)plainAscii;
+                                txtPlain.Text += plainText;
+                                plainAsciiBin = "";
                                 currBinNum = "";
                             }
                             else
@@ -130,6 +134,16 @@ namespace XOR_encryption
             txtCipher.Text = "";
             txtPlain.Text = "";
             txtKey.Text = "";
+        }
+
+        private void btnPlainCopy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(txtPlain.Text);
+        }
+
+        private void btnEncCopy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(txtCipher.Text);
         }
     }
 }
