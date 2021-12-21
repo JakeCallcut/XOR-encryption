@@ -38,6 +38,10 @@
             this.txtCipher = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.btnClrPlain = new System.Windows.Forms.Button();
+            this.btnClrCipher = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtPlain
@@ -53,7 +57,7 @@
             // 
             this.radEnc.AutoSize = true;
             this.radEnc.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radEnc.Location = new System.Drawing.Point(438, 18);
+            this.radEnc.Location = new System.Drawing.Point(972, 25);
             this.radEnc.Name = "radEnc";
             this.radEnc.Size = new System.Drawing.Size(110, 34);
             this.radEnc.TabIndex = 1;
@@ -65,7 +69,7 @@
             // 
             this.radDec.AutoSize = true;
             this.radDec.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radDec.Location = new System.Drawing.Point(438, 58);
+            this.radDec.Location = new System.Drawing.Point(972, 65);
             this.radDec.Name = "radDec";
             this.radDec.Size = new System.Drawing.Size(114, 34);
             this.radDec.TabIndex = 2;
@@ -76,9 +80,9 @@
             // btnGo
             // 
             this.btnGo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGo.Location = new System.Drawing.Point(570, 26);
+            this.btnGo.Location = new System.Drawing.Point(1092, 26);
             this.btnGo.Name = "btnGo";
-            this.btnGo.Size = new System.Drawing.Size(121, 54);
+            this.btnGo.Size = new System.Drawing.Size(121, 73);
             this.btnGo.TabIndex = 3;
             this.btnGo.Text = "GO";
             this.btnGo.UseVisualStyleBackColor = true;
@@ -116,7 +120,7 @@
             // txtCipher
             // 
             this.txtCipher.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCipher.Location = new System.Drawing.Point(570, 161);
+            this.txtCipher.Location = new System.Drawing.Point(555, 161);
             this.txtCipher.Name = "txtCipher";
             this.txtCipher.Size = new System.Drawing.Size(495, 494);
             this.txtCipher.TabIndex = 0;
@@ -136,17 +140,63 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(573, 120);
+            this.label3.Location = new System.Drawing.Point(548, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 38);
             this.label3.TabIndex = 9;
             this.label3.Text = "Ciphertext";
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(1077, 161);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(163, 494);
+            this.richTextBox1.TabIndex = 10;
+            this.richTextBox1.Text = "Notes";
+            // 
+            // btnClrPlain
+            // 
+            this.btnClrPlain.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClrPlain.Location = new System.Drawing.Point(421, 589);
+            this.btnClrPlain.Name = "btnClrPlain";
+            this.btnClrPlain.Size = new System.Drawing.Size(92, 55);
+            this.btnClrPlain.TabIndex = 11;
+            this.btnClrPlain.Text = "Clear";
+            this.btnClrPlain.UseVisualStyleBackColor = true;
+            this.btnClrPlain.Click += new System.EventHandler(this.btnClrPlain_Click);
+            // 
+            // btnClrCipher
+            // 
+            this.btnClrCipher.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClrCipher.Location = new System.Drawing.Point(948, 589);
+            this.btnClrCipher.Name = "btnClrCipher";
+            this.btnClrCipher.Size = new System.Drawing.Size(92, 55);
+            this.btnClrCipher.TabIndex = 12;
+            this.btnClrCipher.Text = "Clear";
+            this.btnClrCipher.UseVisualStyleBackColor = true;
+            this.btnClrCipher.Click += new System.EventHandler(this.btnClrCipher_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(772, 33);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(162, 66);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Clear All";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1097, 682);
+            this.ClientSize = new System.Drawing.Size(1268, 682);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnClrCipher);
+            this.Controls.Add(this.btnClrPlain);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnGo);
             this.Controls.Add(this.radDec);
             this.Controls.Add(this.radEnc);
@@ -176,6 +226,10 @@
         private System.Windows.Forms.RichTextBox txtCipher;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button btnClrPlain;
+        private System.Windows.Forms.Button btnClrCipher;
+        private System.Windows.Forms.Button button1;
     }
 }
 
